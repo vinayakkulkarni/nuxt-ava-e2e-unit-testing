@@ -1,13 +1,23 @@
 {
-  "presets": [
-    [
-      "env", {
-        "targets": {
-          "node": "current"
-        }
-      }
-    ]
-  ],
-  "plugins": [],
-  "ignore": ["ava.config.js"]
+  "env": {
+    "test": {
+      "plugins": [
+        ["module-resolver", {
+          "root": ["./"],
+          "alias": {
+            "@": "./",
+            "~": "./"
+          }
+        }]
+      ],
+      "ignore": ["ava.config.js"],
+      "presets": [
+        [ "env", {
+          "targets": {
+            "node": "current"
+          }
+        }]
+      ]
+    }
+  },
 }
