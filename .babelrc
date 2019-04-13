@@ -2,22 +2,32 @@
   "env": {
     "test": {
       "plugins": [
-        ["module-resolver", {
-          "root": ["./"],
-          "alias": {
-            "@": "./",
-            "~": "./"
+        [
+          "babel-plugin-module-resolver",
+          {
+            "root": [
+              "./"
+            ],
+            "alias": {
+              "@": "./",
+              "~": "./"
+            }
           }
-        }]
+        ]
       ],
-      "ignore": ["ava.config.js"],
+      "ignore": [
+        "ava.config.js"
+      ],
       "presets": [
-        [ "env", {
-          "targets": {
-            "node": "current"
+        [
+          "@babel/preset-env",
+          {
+            "targets": {
+              "node": "current"
+            }
           }
-        }]
+        ]
       ]
     }
-  },
+  }
 }
