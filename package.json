@@ -16,11 +16,11 @@
     "test": "npm run test:unit & npm run test:e2e"
   },
   "dependencies": {
-    "cross-env": "^5.2.0",
-    "nuxt": "^2.4.0",
-    "element-ui": "^2.4.11",
     "@nuxtjs/axios": "^5.3.6",
-    "@nuxtjs/pwa": "^2.6.0"
+    "@nuxtjs/pwa": "^2.6.0",
+    "cross-env": "^5.2.0",
+    "element-ui": "^2.4.11",
+    "nuxt": "^2.4.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.4.3",
