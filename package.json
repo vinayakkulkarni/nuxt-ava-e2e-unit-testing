@@ -20,7 +20,7 @@
     "@nuxtjs/pwa": "^2.6.0",
     "cross-env": "^5.2.0",
     "element-ui": "^2.4.11",
-    "nuxt": "^2.4.0"
+    "nuxt": "^2.6.3"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
