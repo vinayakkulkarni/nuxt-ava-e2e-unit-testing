@@ -19,7 +19,7 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^2.6.0",
     "cross-env": "^5.2.0",
-    "element-ui": "^2.4.11",
+    "element-ui": "^2.8.2",
     "nuxt": "^2.6.3"
   },
   "devDependencies": {
