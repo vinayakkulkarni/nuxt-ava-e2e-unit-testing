@@ -1,7 +1,7 @@
 {
   "name": "nuxt-ava-e2e-unit-testing",
   "version": "1.0.0",
-  "description": "Nuxt app with Ava -&gt; Unit Testing &amp; E2E Testing",
+  "description": "Nuxt demo application with Ava, running E2E and Unit tests",
   "author": "Vinayak Kulkarni",
   "private": true,
   "scripts": {
