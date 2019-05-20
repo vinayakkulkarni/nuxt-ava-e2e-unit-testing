@@ -1,5 +1,5 @@
 export default {
-  require: ['./test/helpers/setup.js'],
+  require: ['./test/_setup.js'],
   sources: ['**/*.{js,vue}'],
   snapshotDir: './test/snapshot',
 };
