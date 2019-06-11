@@ -1,10 +1,11 @@
 <script>
-import { mapMutations } from 'vuex';
+import { mapMutations, mapActions } from 'vuex';
 
 export default {
   data() {
     return {
       todoValue: '',
+      isRequestInProgress: false,
     };
   },
   computed: {
@@ -13,12 +14,18 @@ export default {
     },
   },
   methods: {
+    ...mapActions(['getRandomTodo']),
     ...mapMutations({
       toggle: 'toggle',
     }),
     addTodo() {
       this.$store.commit('add', this.todoValue);
       this.todoValue = '';
+    },
+    async getRandomTodoItem() {
+      this.isRequestInProgress = true;
+      await this.getRandomTodo();
+      this.isRequestInProgress = false;
     },
   },
 };
@@ -41,9 +48,16 @@ export default {
     </ul>
     <input
       v-model="todoValue"
+      class="todo-value"
       placeholder="What needs to be done?"
       @keyup.enter="addTodo"
-      class="todo-value"
+    />
+    <button
+      type="button"
+      :disabled="isRequestInProgress"
+      class="todo-get-random"
+      @click="getRandomTodoItem"
+      v-text="'Get random todo'"
     />
   </div>
 </template>
