@@ -14,6 +14,12 @@ export const mutations = {
   },
 };
 
+export const getters = {
+  getUndoneTodos: state => {
+    return state.list.filter(todo => !todo.done);
+  },
+};
+
 export const actions = {
   async getRandomTodo({ commit }) {
     const randomNumberUnderTwoHundred = Math.floor(Math.random() * 200);

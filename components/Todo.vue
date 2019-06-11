@@ -4,14 +4,13 @@ import { mapMutations, mapActions } from 'vuex';
 export default {
   data() {
     return {
+      todos: [],
       todoValue: '',
       isRequestInProgress: false,
     };
   },
-  computed: {
-    todos() {
-      return this.$store.state.list;
-    },
+  mounted() {
+    this.todos = this.$store.state.list;
   },
   methods: {
     ...mapActions(['getRandomTodo']),
@@ -27,6 +26,13 @@ export default {
       await this.getRandomTodo();
       this.isRequestInProgress = false;
     },
+    showUndoneTasks(evt) {
+      if (evt.target.checked) {
+        this.todos = this.$store.getters.getUndoneTodos;
+      } else {
+        this.todos = this.$store.state.list;
+      }
+    },
   },
 };
 </script>
@@ -37,6 +43,7 @@ export default {
       <li v-for="(todo, index) in todos" :key="index" class="todo-item">
         <input
           :id="`todo-${index}`"
+          class="todo-item-input"
           type="checkbox"
           :checked="todo.done"
           @change="toggle(todo)"
@@ -59,5 +66,8 @@ export default {
       @click="getRandomTodoItem"
       v-text="'Get random todo'"
     />
+    <hr />
+    <input type="checkbox" id="show-undone" @change="showUndoneTasks" />
+    <label for="show-undone">Show only undone todos?</label>
   </div>
 </template>

@@ -3,7 +3,11 @@ import Vuex from 'vuex';
 import test from 'ava';
 import sinon from 'sinon';
 import Todo from '@/components/Todo.vue';
-import { state as storeState, mutations as storeMutations } from '@/store';
+import {
+  state as storeState,
+  mutations as storeMutations,
+  getters as storeGetters,
+} from '@/store';
 
 const localVue = createLocalVue();
 
@@ -79,4 +83,28 @@ test('it should add new todo to list (state)', t => {
   add(store.state, 'A new item');
 
   t.assert(store.state.list.length > 0);
+});
+
+/**
+ * Sample test for getters
+ */
+test('it should return only undone todos from state', t => {
+  const { getUndoneTodos } = storeGetters;
+
+  state.list = [
+    {
+      done: false,
+      text: 'A new item',
+    },
+    {
+      done: false,
+      text: 'A second item',
+    },
+    {
+      done: true,
+      text: 'Another item',
+    },
+  ];
+
+  t.falsy(getUndoneTodos(state).some(todo => todo.done));
 });
