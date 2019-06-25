@@ -9,15 +9,19 @@
         Nuxt app with Ava -&gt; Unit Testing &amp; E2E Testing
       </h2>
       <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green"
-          >Documentation</a
-        >
+        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
+          Documentation
+        </a>
+        <nuxt-link to="/examples" class="button--green">
+          Examples
+        </nuxt-link>
         <a
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
           class="button--grey"
-          >GitHub</a
         >
+          GitHub
+        </a>
       </div>
     </div>
   </section>
