@@ -1,11 +1,3 @@
-<script>
-export default {
-  components: {
-    Todo: () => import('~/components/Todo.vue'),
-  },
-};
-</script>
-
 <template>
   <section id="vuex-example">
     <div class="container">
@@ -18,6 +10,14 @@ export default {
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  components: {
+    Todo: () => import('~/components/Todo.vue'),
+  },
+};
+</script>
 
 <style>
 .container {

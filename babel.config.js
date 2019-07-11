@@ -1,27 +1,28 @@
 module.exports = {
-  "env": {
-    "test": {
-      "plugins": [
+  env: {
+    test: {
+      plugins: [
         [
-          "module-resolver",
+          'module-resolver',
           {
-            "root": [
-              "."
-            ],
-            "alias": {
-              "@": ".",
-              "~": "."
-            }
-          }
-        ]
+            root: ['.'],
+            alias: {
+              '@': '.',
+              '~': '.',
+            },
+          },
+        ],
       ],
-      "presets": [
-        [ "@babel/env", {
-          targets: {
-            node: "current"
-          }
-        }]
-      ]
-    }
+      presets: [
+        [
+          '@babel/env',
+          {
+            targets: {
+              node: 'current',
+            },
+          },
+        ],
+      ],
+    },
   },
 };
