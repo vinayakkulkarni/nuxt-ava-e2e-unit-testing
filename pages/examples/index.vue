@@ -1,18 +1,3 @@
-<script>
-export default {
-  data() {
-    return {
-      examples: [
-        {
-          label: 'Vuex - Todo',
-          href: '/examples/vuex-todo',
-        },
-      ],
-    };
-  },
-};
-</script>
-
 <template>
   <!--  Todo: make a better looking example page -->
   <section id="examples">
@@ -38,6 +23,21 @@ export default {
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      examples: [
+        {
+          label: 'Vuex - Todo',
+          href: '/examples/vuex-todo',
+        },
+      ],
+    };
+  },
+};
+</script>
 
 <style>
 .container {
