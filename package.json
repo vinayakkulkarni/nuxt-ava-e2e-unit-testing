@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.8.0",
-    "@nuxtjs/pwa": "^3.0.0-beta.16",
+    "@nuxtjs/pwa": "^3.0.0-beta.19",
     "cross-env": "^5.2.0",
     "element-ui": "^2.13.0",
     "nuxt": "^2.10.2"
