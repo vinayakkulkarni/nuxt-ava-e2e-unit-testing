@@ -12,7 +12,7 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "test:unit": "cross-env TEST=unit nyc ava --config unit-tests.config.js  --color",
+    "test:unit": "cross-env TEST=unit nyc ava --config unit-tests.config.js --color",
     "test:unit:watch": "cross-env TEST=unit nyc ava --config unit-tests.config.js --color --watch",
     "test:e2e": "cross-env TEST=e2e nyc ava --config e2e-tests.config.js --verbose --color",
     "test": "npm run test:unit & npm run test:e2e",
@@ -26,11 +26,12 @@
     "nuxt": "^2.11.0"
   },
   "devDependencies": {
+    "@ava/babel": "^1.0.0",
     "@babel/preset-env": "^7.8.3",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@vue/test-utils": "^1.0.0-beta.30",
-    "ava": "^2.4.0",
+    "ava": "^3.0.0",
     "babel-eslint": "^10.0.3",
     "babel-plugin-module-resolver": "^4.0.0",
     "browser-env": "^3.3.0",
