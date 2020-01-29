@@ -12,9 +12,9 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "test:unit": "cross-env TEST=unit nyc ava --config unit-tests.config.js",
-    "test:unit:watch": "cross-env TEST=unit nyc ava --config unit-tests.config.js --watch",
-    "test:e2e": "cross-env TEST=e2e nyc ava --config e2e-tests.config.js --verbose",
+    "test:unit": "cross-env TEST=unit nyc ava --config ava.config.cjs ./test/specs/**/*",
+    "test:unit:watch": "cross-env TEST=unit nyc ava --config ava.config.cjs --watch",
+    "test:e2e": "cross-env TEST=e2e ava --config ava.config.cjs ./test/e2e/**/*",
     "test": "npm run test:unit & npm run test:e2e",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
