@@ -50,7 +50,7 @@
     "husky": "^4.2.3",
     "jsdom-global": "^3.0.2",
     "nodemon": "^2.0.2",
-    "nyc": "^15.0.0",
+    "nyc": "^15.0.1",
     "prettier": "^2.0.2",
     "require-extension-hooks": "^0.3.3",
     "require-extension-hooks-babel": "^1.0.0",
