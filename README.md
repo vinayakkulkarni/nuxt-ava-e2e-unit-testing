@@ -1,6 +1,8 @@
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Build Status](https://travis-ci.org/vinayakkulkarni/nuxt-ava-e2e-unit-testing.svg?branch=master)](https://travis-ci.org/vinayakkulkarni/nuxt-ava-e2e-unit-testing) [![Coverage Status](https://coveralls.io/repos/github/vinayakkulkarni/nuxt-ava-e2e-unit-testing/badge.svg?branch=master)](https://coveralls.io/github/vinayakkulkarni/nuxt-ava-e2e-unit-testing?branch=master) ![Dependencies](https://img.shields.io/david/vinayakkulkarni/nuxt-ava-e2e-unit-testing.svg)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fvinayakkulkarni%2Fnuxt-ava-e2e-unit-testing.svg?type=shield)](https://app.fossa.com/reports/1c6f5969-d245-4b21-8282-9e54baaeb441)[![Build Status](https://travis-ci.org/vinayakkulkarni/nuxt-ava-e2e-unit-testing.svg?branch=master)](https://travis-ci.org/vinayakkulkarni/nuxt-ava-e2e-unit-testing) [![Coverage Status](https://coveralls.io/repos/github/vinayakkulkarni/nuxt-ava-e2e-unit-testing/badge.svg?branch=master)](https://coveralls.io/github/vinayakkulkarni/nuxt-ava-e2e-unit-testing?branch=master) 
 
-# Nuxt 
+![Dependencies](https://img.shields.io/david/vinayakkulkarni/nuxt-ava-e2e-unit-testing.svg)
+
+# Nuxt & Ava
 
 > [Nuxt.js](https://nuxtjs.org) app with [Ava](https://ava.li) -> Unit Testing & E2E Testing
 
