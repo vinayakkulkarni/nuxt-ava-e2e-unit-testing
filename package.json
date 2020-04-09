@@ -49,7 +49,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "husky": "^4.2.3",
     "jsdom-global": "^3.0.2",
-    "nodemon": "^2.0.2",
+    "nodemon": "^2.0.3",
     "nyc": "^15.0.1",
     "prettier": "^2.0.4",
     "require-extension-hooks": "^0.3.3",
