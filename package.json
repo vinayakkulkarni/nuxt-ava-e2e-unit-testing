@@ -30,7 +30,7 @@
     "@babel/preset-env": "^7.11.5",
     "@commitlint/cli": "^9.1.2",
     "@commitlint/config-conventional": "^9.1.2",
-    "@vue/test-utils": "^1.0.5",
+    "@vue/test-utils": "^1.1.0",
     "ava": "^3.12.1",
     "babel-eslint": "^10.1.0",
     "babel-plugin-module-resolver": "^4.0.0",
