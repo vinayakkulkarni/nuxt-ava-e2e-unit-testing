@@ -21,7 +21,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.12.3",
     "@nuxtjs/pwa": "^3.3.2",
-    "cross-env": "^7.0.2",
+    "cross-env": "^7.0.3",
     "element-ui": "^2.14.1",
     "nuxt": "^2.14.8"
   },
