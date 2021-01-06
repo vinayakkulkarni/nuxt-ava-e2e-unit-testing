@@ -55,6 +55,6 @@
     "require-extension-hooks": "^0.3.3",
     "require-extension-hooks-babel": "^1.0.0",
     "require-extension-hooks-vue": "^3.0.0",
-    "sinon": "^9.2.2"
+    "sinon": "^9.2.3"
   }
 }
