@@ -1,0 +1,54 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+    branches:
+      - main
+      - dev
+
+jobs:
+  ci:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [14, 15]
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@master
+
+      - name: Setup node env 📦
+        uses: actions/setup-node@v2.1.4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Get npm cache directory 🏗
+        id: npm-cache
+        run: echo "::set-output name=dir::$(npm config get cache)"
+
+      - name: Restore cached node_modules 🤷‍♂️
+        uses: actions/cache@v2.1.4
+        with:
+          path: ${{ steps.npm-cache.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies 🛠
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm install
+
+      - name: Generate the static site ⚡️
+        run: npm run generate
+
+      - name: Check for lint errors 👀
+        run: npm run lint
+
+      - name: Run Tests 🧪
+        run: npm run test
