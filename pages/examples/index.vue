@@ -25,28 +25,28 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      examples: [
-        {
-          label: 'Vuex - Todo',
-          href: '/examples/vuex-todo',
-        },
-      ],
-    };
-  },
-};
+  export default {
+    data() {
+      return {
+        examples: [
+          {
+            label: 'Vuex - Todo',
+            href: '/examples/vuex-todo',
+          },
+        ],
+      };
+    },
+  };
 </script>
 
 <style>
-.container {
-  display: flex;
-  flex-direction: column;
-  max-width: 70%;
-  margin: 0 auto;
-}
-.examples-header {
-  margin-top: 2rem;
-}
+  .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    margin: 0 auto;
+  }
+  .examples-header {
+    margin-top: 2rem;
+  }
 </style>

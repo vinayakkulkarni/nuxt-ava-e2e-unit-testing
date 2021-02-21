@@ -12,24 +12,24 @@
 </template>
 
 <script>
-export default {
-  components: {
-    Todo: () => import('~/components/Todo.vue'),
-  },
-};
+  export default {
+    components: {
+      Todo: () => import('~/components/Todo.vue'),
+    },
+  };
 </script>
 
 <style>
-.container {
-  display: flex;
-  flex-direction: column;
-  max-width: 70%;
-  margin: 0 auto;
-}
-.vuex-example-header {
-  margin-top: 2rem;
-}
-.done {
-  text-decoration: line-through;
-}
+  .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    margin: 0 auto;
+  }
+  .vuex-example-header {
+    margin-top: 2rem;
+  }
+  .done {
+    text-decoration: line-through;
+  }
 </style>

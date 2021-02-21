@@ -26,7 +26,7 @@ function createStore(state, mutations, actions) {
 /**
  * Mock the store before each test.
  */
-test.beforeEach(t => {
+test.beforeEach((t) => {
   state = storeState;
 
   mutations = {
@@ -44,7 +44,7 @@ test.beforeEach(t => {
 /**
  * Sample test for component.
  */
-test('component should mount', t => {
+test('component should mount', (t) => {
   const wrapper = shallowMount(Todo, { localVue, store });
   t.is(wrapper.isVueInstance(), true);
 });
@@ -52,7 +52,7 @@ test('component should mount', t => {
 /**
  * Sample test for mutations.
  */
-test('it should call add mutation', t => {
+test('it should call add mutation', (t) => {
   const wrapper = shallowMount(Todo, { localVue, store });
   const input = wrapper.find('.todo-value');
 
@@ -65,7 +65,7 @@ test('it should call add mutation', t => {
 /**
  * Sample test for actions.
  */
-test('it should call getRandomTodo action', t => {
+test('it should call getRandomTodo action', (t) => {
   const wrapper = shallowMount(Todo, { localVue, store });
   const btn = wrapper.find('.todo-get-random');
 
@@ -77,7 +77,7 @@ test('it should call getRandomTodo action', t => {
 /**
  * Sample test for the state.
  */
-test('it should add new todo to list (state)', t => {
+test('it should add new todo to list (state)', (t) => {
   const { add } = storeMutations;
 
   add(store.state, 'A new item');
@@ -88,7 +88,7 @@ test('it should add new todo to list (state)', t => {
 /**
  * Sample test for getters
  */
-test('it should return only undone todos from state', t => {
+test('it should return only undone todos from state', (t) => {
   const { getUndoneTodos } = storeGetters;
 
   state.list = [
@@ -106,5 +106,5 @@ test('it should return only undone todos from state', t => {
     },
   ];
 
-  t.falsy(getUndoneTodos(state).some(todo => todo.done));
+  t.falsy(getUndoneTodos(state).some((todo) => todo.done));
 });

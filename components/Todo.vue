@@ -34,40 +34,40 @@
 </template>
 
 <script>
-import { mapMutations, mapActions } from 'vuex';
+  import { mapMutations, mapActions } from 'vuex';
 
-export default {
-  data() {
-    return {
-      todos: [],
-      todoValue: '',
-      isRequestInProgress: false,
-    };
-  },
-  mounted() {
-    this.todos = this.$store.state.list;
-  },
-  methods: {
-    ...mapActions(['getRandomTodo']),
-    ...mapMutations({
-      toggle: 'toggle',
-    }),
-    addTodo() {
-      this.$store.commit('add', this.todoValue);
-      this.todoValue = '';
+  export default {
+    data() {
+      return {
+        todos: [],
+        todoValue: '',
+        isRequestInProgress: false,
+      };
     },
-    async getRandomTodoItem() {
-      this.isRequestInProgress = true;
-      await this.getRandomTodo();
-      this.isRequestInProgress = false;
+    mounted() {
+      this.todos = this.$store.state.list;
     },
-    showUndoneTasks(evt) {
-      if (evt.target.checked) {
-        this.todos = this.$store.getters.getUndoneTodos;
-      } else {
-        this.todos = this.$store.state.list;
-      }
+    methods: {
+      ...mapActions(['getRandomTodo']),
+      ...mapMutations({
+        toggle: 'toggle',
+      }),
+      addTodo() {
+        this.$store.commit('add', this.todoValue);
+        this.todoValue = '';
+      },
+      async getRandomTodoItem() {
+        this.isRequestInProgress = true;
+        await this.getRandomTodo();
+        this.isRequestInProgress = false;
+      },
+      showUndoneTasks(evt) {
+        if (evt.target.checked) {
+          this.todos = this.$store.getters.getUndoneTodos;
+        } else {
+          this.todos = this.$store.state.list;
+        }
+      },
     },
-  },
-};
+  };
 </script>

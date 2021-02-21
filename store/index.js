@@ -15,8 +15,8 @@ export const mutations = {
 };
 
 export const getters = {
-  getUndoneTodos: state => {
-    return state.list.filter(todo => !todo.done);
+  getUndoneTodos: (state) => {
+    return state.list.filter((todo) => !todo.done);
   },
 };
 
