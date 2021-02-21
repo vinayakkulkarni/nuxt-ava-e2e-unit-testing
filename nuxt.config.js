@@ -1,8 +1,16 @@
 import pkg from './package';
 
 export default {
-  mode: 'spa',
-
+  /*
+   ** Nuxt rendering mode
+   ** See https://nuxtjs.org/guides/features/rendering-modes#spa
+   */
+  ssr: false,
+  /*
+   ** Nuxt target
+   ** See https://nuxtjs.org/api/configuration-target
+   */
+  target: 'static',
   /*
    ** Headers of the page
    */
