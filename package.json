@@ -33,7 +33,7 @@
     "@ava/babel": "^1.0.1",
     "@babel/preset-env": "^7.14.4",
     "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.4",
     "@vinayakkulkarni/prettier-config-vue": "^1.0.0",
     "@vue/test-utils": "^1.2.0",
     "ava": "^3.15.0",
