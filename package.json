@@ -51,7 +51,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-standard": "^5.0.0",
-    "eslint-plugin-vue": "^7.15.1",
+    "eslint-plugin-vue": "^7.16.0",
     "husky": "4.3.8",
     "jsdom-global": "^3.0.2",
     "nodemon": "^2.0.12",
