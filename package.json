@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@ava/babel": "^2.0.0",
-    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-env": "^7.16.5",
     "@commitlint/cli": "^14.1.0",
     "@commitlint/config-conventional": "^14.1.0",
     "@vinayakkulkarni/prettier-config-vue": "^1.0.0",
